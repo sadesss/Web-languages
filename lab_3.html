@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Дерево элементов страницы</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Экзамены</h1>
+    <table>
+      <tr>
+        <th>ПН</th>
+        <th>ВТ</th>
+      </tr>
+      <tr>
+        <td>Физика</td>
+        <td>Математика</td>
+      </tr>
+    </table>
+    <div id="result"></div>
+
+    <script type="text/javascript">
+      function PrintTree(path, indent) {
+        cur = path.tagName;
+        console.log("Enter to " + cur);
+        if (path.children.length > 0) {
+          for (var i = 0; i < path.children.length; i++) {
+            cur +=
+              "<br/>" +
+              "&nbsp;".repeat(indent * 4) +
+              PrintTree(path.children[i], indent + 1);
+          }
+        }
+        console.log("Out of " + path.tagName);
+        return cur;
+      }
+      document.getElementById("result").innerHTML += PrintTree(
+        document.documentElement,
+        0
+      );
+    </script>
+  </body>
+</html>
