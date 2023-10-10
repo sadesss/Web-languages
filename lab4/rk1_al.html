@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>РК1</title>
+  </head>
+  <body>
+    <h2>Пищикова Алевтина Андреевна ИУ6-34Б Вариант 20</h2>
+    <h3>Задание билета:</h3>
+    <h4>
+      Дан массив чисел arr_l. Найти частное от деления минимального элемента
+      массива на максимальный. Поместить его на место последнего элемента
+      массива с индексом, кратным 7.
+    </h4>
+    <p>P.S. Индексы массива начинаются с 0. Считаем 0 кратным 7.</p>
+    <p>
+      P.P.S. Для вывода массива по умолчанию воспользуйтесь кнопкой
+      "Рассчитать". При этом исх. массив оставьте пустым.
+    </p>
+    <div>
+      <label>Поле для ввода массива</label><br />
+      <input id="enter" type="text" placeholder="По одному элементу" />
+      <button onclick="add()">Добавить</button><br />
+      <button id="calc" onclick="calc()">Рассчитать</button>
+    </div>
+    <p></p>
+    <div id="result_arr"></div>
+    <div id="result_calc"></div>
+    <script>
+      document.getElementById("result_arr").innerHTML = "Исх. массив: ";
+      var arr_l = [];
+      var arr_uml = [2, 3, 2, 4, 5, 6, 4, 2, 10, 8];
+      function add() {
+        var b = document.getElementById("enter").value;
+        if (b == "") {
+          alert(
+            "Введите число, поле не может быть пустым.Для вывода массива по умолчанию воспользуйтесь кнопкой Рассчитать"
+          );
+          return;
+        }
+        var num = parseFloat(b, 10);
+        if (isNaN(b)) {
+          alert("Число должно состоять из цифр");
+          return;
+        }
+        arr_l.push(num);
+        if (arr_l.length > 1) {
+          document.getElementById("result_arr").innerHTML += "; " + num;
+        } else {
+          document.getElementById("result_arr").innerHTML += num;
+        }
+        document.getElementById("enter").value = "";
+      }
+      function calc() {
+        var flag = 0;
+        if (!arr_l.length) {
+          alert(
+            "Вы не ввели ни одного элемента. Будет введен массив по умолчанию"
+          );
+          arr_l = arr_uml;
+          document.getElementById("result_arr").innerHTML =
+            "Исх. массив: " + arr_l.join("; ");
+        }
+        if (arr_l.length == 1) {
+          alert(
+            "Вы ввели только один элемент. Введите второй для расчёта частного"
+          );
+          return;
+        }
+        var min_l = Math.min.apply(null, arr_l);
+        var max_l = Math.max.apply(null, arr_l);
+        if (max_l == 0) {
+          alert("Делить на ноль нельзя! Введите другое максимальное число");
+          return;
+        }
+        var chastnoe = min_l / max_l;
+        for (let i = arr_l.length; i >= 0; i--) {
+          if (i % 7 == 0) {
+            arr_l[i] = chastnoe.toFixed(3);
+            flag = 1;
+            break;
+          }
+        }
+        if (flag == 0) {
+          alert("Изменений не произошло. Введите другой массив");
+          return;
+        }
+        document.getElementById("result_calc").innerHTML =
+          "Массив после вычислений: " + arr_l.join("; ");
+      }
+    </script>
+  </body>
+</html>

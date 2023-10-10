@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid rgb(56, 121, 30);
+      }
+      .clr1 {
+        background-color: rgb(122, 216, 150);
+      }
+      .clr2:hover {
+        background-color: rgb(216, 122, 196);
+      }
+      .clr3 {
+        background-color: rgb(228, 224, 89);
+      }
+      .font {
+        font-family: "Gilroy";
+        src: url(gilroy-thin.ttf);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="font">Каталог</h1>
+    <h3 class="font">Добавить товар:</h3>
+    <div class="font">
+      <label>Наименование товара</label><br />
+      <input type="text" id="nam" name="nam" placeholder="Что" />
+      <br />
+    </div>
+    <div class="font">
+      <label>Цена</label><br />
+      <input type="text" id="cost" name="cost" placeholder="За сколько" />
+      <br />
+    </div>
+    <p></p>
+    <button id="submit" onclick="add()" class="clr1">Добавить</button>
+    <button class="clr3" id="calc" onclick="summ()">Рассчитать сумму</button>
+    <p></p>
+    <div id="totalsumm"></div>
+    <table id="table" class="font">
+      <thead>
+        <th>Наименование</th>
+        <th>Цена, руб</th>
+        <th></th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <p></p>
+    <button class="clr3" id="bagcalc" onclick="summBag()">
+      Рассчитать сумму корзины
+    </button>
+    <p></p>
+    <table id="bagtable" class="font">
+      <thead>
+        <th>Наименование</th>
+        <th>Цена, руб</th>
+      </thead>
+      <tbody id="bagtbody"></tbody>
+    </table>
+    <p></p>
+    <div id="bagsumm"></div>
+    <script src="lab_4.js"></script>
+  </body>
+</html>
