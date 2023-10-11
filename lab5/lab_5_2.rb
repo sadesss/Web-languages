@@ -8,9 +8,8 @@ def func(arr)
   arr.each_index do |ind|
     next unless negative_found == false
 
-    cur = (arr[ind]).negative? ? ind : 0
-    negative_found = arr[ind].negative?
-    increasing = check(arr, ind) if ind != cur
+    cur, negative_found = arr[ind].negative? ? [ind, true] : [0, negative_found]
+    increasing = ind != cur ? check(arr, ind) : increasing
   end
   puts increasing
   increasing
