@@ -9,8 +9,7 @@ def func(arr)
     next unless negative_found == false
 
     cur, negative_found = arr[ind].negative? ? [ind, true] : [0, negative_found]
-    increasing = ind != cur ? !(arr[ind - 1] > arr[ind])  : increasing
+    increasing = ind != cur ? arr[ind - 1] <= arr[ind] : increasing
   end
-  puts increasing
   increasing
 end

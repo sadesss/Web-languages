@@ -3,5 +3,5 @@
 
 def func(num)
   res = (1 - Math.sqrt(1 + Math.sin(num).abs)) / (2 + Math.cos(num)**2)
-  puts format('%.2f', res)
+  format('%.2f', res)
 end
