@@ -2,7 +2,7 @@
 
 # lab_6_3.rb
 def trap(num_a, num_b, &block)
-  num_n = 1e+4
+  num_n = 1e+6
   num_h = (num_b - num_a).to_f / num_n
   sum = 0.5 * (block.call(num_a) + block.call(num_b))
 
