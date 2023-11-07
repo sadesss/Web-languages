@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICS6 Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    .btn{}
+    .sr-only
+    table, tr, th, td {
+   border: 1px solid black;
+  }
+    @font-face{
+ font-family:"Gilroy";
+ src: url(Gilroy-Thin.ttf);
+ }
+    h1, h2 { font-family: sans-serif }
+    .color1 {color:steelblue; background-color:lightcyan}
+    
+    
+    span#ital{font-family:"Gilroy";font-weight: bold;font-style:italic; color:green;padding:5%5%}
+    
+    span#mot {font-family: "Goudy Bookletter 1911", sans-serif;font-weight: bold; color:tomato}
+    
+    body {
+      margin-bottom: 40px;
+    }
+    
+    main {
+      margin-top: 15px;
+    }
+    
+    footer {
+      height: 40px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    .my-primary {
+      background-color: orange;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home
+ <span class="sr-only">(current)</span>
+ </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col-4">
+        <img src="https://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/avatar.jpg?forcedownload=1" alt="avatar" width="150" height="150">
+      </div>
+      <div class="col-8">
+        <p>Любой текст</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <form action="/form_submit" method="get"> 
+  Имя:<br>     
+  <input type="text"  name="fname"><br>
+  Фамилия: <br>
+  <input type="text" name="lname"><br>
+  Почта: <br>
+  <input type="text" name="lname"><br>
+  Пол: <br>
+  <input type="radio" name="gender" value="m" checked>м
+  <input type="radio" name="gender" value="f">ж<br>
+  <button type="button" class="btn btn-primary">Send</button>
+ </form> 
+      </div>
+      <div class="col-4">
+         <table class="table table-hover">
+    <tr>
+      <th></th>
+      <th>ПН</th>
+      <th>ВТ</th>
+    </tr>
+       <tr>
+      <td>10:15-11:50</td>
+      <td></td>
+      <td>(сем)Логика 710л  <em>Иванова Е.Л.</em></td>
+    </tr>
+    <tr>
+      <td>12:00-13:35</td>
+      <td>(сем) Полит.анализ 1015л <em>Бочарников И.В.</em> </td>
+      <td>(лек)Программная инженерия 224л <em>Барышникова М.Ю.</em></td>
+    </tr>
+    <tr>
+      <td>13:50-15:25</td>
+      <td>(сем)Философия 733л  <em>Архиереев Н.Л.</em></td>
+      <td>(сем)Культура деловой речи 739л <em>Чернышева Н.Л.</em></td>
+    </tr>
+ </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2> Владимир Маяковский </h2>
+ <h1> Нате! </h1>
+ <pre>
+ Через час отсюда в <span class="color1">чистый переулок</span>
+ вытечет по человеку ваш обрюзгший жир,
+ вот вы, женщинa, на вас белила густо,
+ вы смотрите устрицей из раковин вещей.
+ Все вы на <span id="ital">бабочку поэтиного сердца
+ взгромоздитесь</span>, грязные, в калошах и без калош.
+ А если сегодня мне, грубому гунну,
+ кривляться перед вами не захочется — и вот
+ я захохочу и радостно плюну,
+ плюну в лицо вам
+ <span id="mot">            я — бесценных слов транжир и мот.</span>
+ </pre>
+ <p style="color:grey"> <small>1913</small></p>
+      </div>
+    </div>
+  </main>
+  <footer class="my-primary">
+  <div class="container">
+      <p class="footer-text">Footer</p>
+    </div>
+  </footer>
+</body>
+</html>
