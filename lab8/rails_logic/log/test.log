@@ -1,0 +1,172 @@
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+ArmsControllerTest: test_should_get_output
+------------------------------------------
+Started GET "/arms/output" for 127.0.0.1 at 2023-11-07 14:13:25 +0300
+Processing by ArmsController#output as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 994)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ArmsControllerTest: test_should_get_input
+-----------------------------------------
+Started GET "/arms/input" for 127.0.0.1 at 2023-11-07 14:13:25 +0300
+Processing by ArmsController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering arms/input.html.erb within layouts/application
+  Rendered arms/input.html.erb within layouts/application (Duration: 0.5ms | Allocations: 490)
+  Rendered layout layouts/application.html.erb (Duration: 193.3ms | Allocations: 96485)
+Completed 200 OK in 197ms (Views: 194.8ms | ActiveRecord: 0.0ms | Allocations: 99628)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/calc/output?val=3" for 127.0.0.1 at 2023-11-07 14:13:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/calc/output"):
+  
+test/controllers/arms_controller_test.rb:15:in `block in <class:ArmsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/calc/output?val=3" for 127.0.0.1 at 2023-11-07 14:13:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/calc/output"):
+  
+test/controllers/arms_controller_test.rb:15:in `block in <class:ArmsControllerTest>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+ArmsControllerTest: test_should_get_output
+------------------------------------------
+Started GET "/arms/output" for 127.0.0.1 at 2023-11-07 14:13:52 +0300
+Processing by ArmsController#output as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 974)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/calc/output?val=3" for 127.0.0.1 at 2023-11-07 14:14:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/calc/output"):
+  
+test/controllers/arms_controller_test.rb:15:in `block in <class:ArmsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+ArmsControllerTest: test_should_get_output
+------------------------------------------
+Started GET "/arms/output" for 127.0.0.1 at 2023-11-07 14:14:10 +0300
+Processing by ArmsController#output as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 974)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/calc/output?val=3" for 127.0.0.1 at 2023-11-07 14:14:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/calc/output"):
+  
+test/controllers/arms_controller_test.rb:15:in `block in <class:ArmsControllerTest>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ArmsControllerTest: test_should_get_input
+-----------------------------------------
+Started GET "/arms/input" for 127.0.0.1 at 2023-11-07 14:14:17 +0300
+Processing by ArmsController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering arms/input.html.erb within layouts/application
+  Rendered arms/input.html.erb within layouts/application (Duration: 0.4ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 32012)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 33746)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ArmsControllerTest: test_should_get_input
+-----------------------------------------
+Started GET "/arms/input" for 127.0.0.1 at 2023-11-07 14:14:47 +0300
+Processing by ArmsController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering arms/input.html.erb within layouts/application
+  Rendered arms/input.html.erb within layouts/application (Duration: 0.5ms | Allocations: 489)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 32190)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 36146)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/arms/output?val=3" for 127.0.0.1 at 2023-11-07 14:14:47 +0300
+Processing by ArmsController#output as HTML
+  Parameters: {"val"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering arms/output.html.erb within layouts/application
+  Rendered arms/output.html.erb within layouts/application (Duration: 0.5ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1524)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 8096)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/arms/output?val=3" for 127.0.0.1 at 2023-11-07 14:15:44 +0300
+Processing by ArmsController#output as HTML
+  Parameters: {"val"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering arms/output.html.erb within layouts/application
+  Rendered arms/output.html.erb within layouts/application (Duration: 0.5ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 32376)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 42657)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ArmsControllerTest: test_should_get_input
+-----------------------------------------
+Started GET "/arms/input" for 127.0.0.1 at 2023-11-07 14:15:44 +0300
+Processing by ArmsController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering arms/input.html.erb within layouts/application
+  Rendered arms/input.html.erb within layouts/application (Duration: 0.7ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1528)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1789)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+ArmsControllerTest: test_should_get_[153_370_371_407]_for_n_=_3
+---------------------------------------------------------------
+Started GET "/arms/output?val=3" for 127.0.0.1 at 2023-11-07 14:16:50 +0300
+Processing by ArmsController#output as HTML
+  Parameters: {"val"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering arms/output.html.erb within layouts/application
+  Rendered arms/output.html.erb within layouts/application (Duration: 1.0ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 32292)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.0ms | Allocations: 42573)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ArmsControllerTest: test_should_get_input
+-----------------------------------------
+Started GET "/arms/input" for 127.0.0.1 at 2023-11-07 14:16:50 +0300
+Processing by ArmsController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering arms/input.html.erb within layouts/application
+  Rendered arms/input.html.erb within layouts/application (Duration: 0.4ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1528)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1789)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
