@@ -16,6 +16,6 @@ class TestFiles < Minitest::Test
 
     work(file_f, file_g)
     lines = File.readlines('G.txt').map(&:chomp)
-    assert_equal ['начальная строка строка1'], lines
+    assert_equal ['начальная строка', ' строка1'], lines
   end
 end

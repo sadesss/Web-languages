@@ -1,49 +1,50 @@
 # frozen_string_literal: true
 
+# _7_2.rb
+
 require 'minitest/autorun'
 require_relative '7_2'
-# класс проверки пациента-родителя
+# parent patient verification class
 class PatientTest < Minitest::Test
-  # инициализирую
+  # initialize
   def setup
-    @patient1 = Patient.new('Иванова', 18)
+    @patient1 = Patient.new('Ivanova', 18)
   end
 
-  # проверка вывода и ошибок
+  # checking output and errors
   def test_puts_
     out, _err = capture_subprocess_io do
       @patient1.puts_
     end
-    assert_match 'Фамилия: Иванова, Возраст: 18', out
+    assert_match 'Last name: Ivanova, Age: 18', out
   end
 
-  # проверка соответсвию класса
+  # checking the compliance of the class
   def test_children
     assert_kind_of Patient, @patient1
   end
 end
 
-# класс проверки больного
+# patient verification class
 class IllnessTest < Minitest::Test
-  # инициализация
   def setup
-    @ill = Illness.new('Петров', 45, 2020)
+    @ill = Illness.new('Petrov', 45, 2020)
   end
 
-  # проерка вывода и ошибок
+  # checking output and errors
   def test_puts2
     output = capture_io do
       @ill.puts_
     end
-    assert_equal "Фамилия: Петров, Возраст: 45\n", output.join
+    assert_equal "Last name: Petrov, Age: 45\n", output.join
   end
 
-  # проверка подсчета года диспансеризации
+  # checking  the year of dispans
   def test_year_disp
     assert_equal 2023, @ill.year_next_dispans
   end
 
-  # проверка на детей пациента
+  # checking on the class Patient's children
   def test_children2
     assert_kind_of Patient, @ill
   end

@@ -1,0 +1,2 @@
+String from G file 
+ String from F file

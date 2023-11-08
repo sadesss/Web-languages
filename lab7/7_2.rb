@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-# класс Пациент
+# 7_2.rb
+
+# class Patient
 class Patient
   def initialize(last_name, age)
     @last_name = last_name
@@ -8,11 +10,11 @@ class Patient
   end
 
   def puts_
-    puts "Фамилия: #{@last_name}, Возраст: #{@age}"
+    puts "Last name: #{@last_name}, Age: #{@age}"
   end
 end
 
-# класс Больной, класс наследник
+# class Illness, class-child
 class Illness < Patient
   def initialize(last_name, age, year_dispans)
     super(last_name, age)
