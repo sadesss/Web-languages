@@ -1,0 +1,24 @@
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Подключение JavaScript файла -->
+<script src="app/javascript/calc.js"></script>
+
+<!-- app/views/calc/_output.html.erb -->
+<% if @armstrong_numbers.present? %>
+  <table border="1" class="table">
+    <div>Числа</div>
+    <% @armstrong_numbers.each do |value| %>
+      <tr>
+        <%= value %>
+      </tr>
+    <% end %>
+    <div>Количество</div>
+    <%= @armstrong_numbers.length %>
+    
+  </table>
+  
+<% else %>
+  <p>No Armstrong numbers found</p>
+<% end %>
+

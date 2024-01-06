@@ -1,0 +1,19 @@
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Подключение JavaScript файла -->
+<script src="app/javascript/calc.js"></script>
+
+ <!-- app/views/calc/output.html.erb -->
+<table border="1" class="table">
+  <div>Числа</div>
+  <% @armstrong_numbers.each do |value| %>
+    <tr>
+      <%= value %>
+    </tr>
+  <% end %>
+  <div>Количество</div>
+  <%= @armstrong_numbers.length %>
+  
+</table>
+<%= link_to "Try again", :calc_input %>

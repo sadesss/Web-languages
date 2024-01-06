@@ -1,0 +1,20 @@
+<!-- app/views/calc/input.html.erb -->
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <%= javascript_include_tag 'calc' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="form">
+    <div class="mb-2 words">Input n</div>
+    <%= form_tag("/calc/output", method: "get", remote: true) do %>
+      <div class="mb-2 words">Number:</div>
+      <%= number_field_tag(:val, "Input n from 1 to 10", class: "form-control mb-2", min: "1", max: "10", pattern: "^[1-9][0]?$|^10$", placeholder: "Input n from 1 to 10", required: "required") %>
+      <%= button_tag "Go!", class: "btn btn-light", id: "go-button" %>
+    <% end %>
+
+  </div>
+  <div id="results-container" text-align="center" class= "form">
+      <%= render partial: 'calc/output' %>
+    </div>
+</body>
